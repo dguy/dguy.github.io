@@ -1,0 +1,319 @@
+:root {
+  --bg: #f5f1e8;
+  --bg-accent: #efe6d6;
+  --surface: rgba(255, 252, 246, 0.82);
+  --surface-strong: #fdf9f2;
+  --text: #21302a;
+  --muted: #56655f;
+  --line: rgba(33, 48, 42, 0.12);
+  --accent: #32594d;
+  --accent-soft: #d8e2d8;
+  --shadow: 0 24px 60px rgba(64, 68, 52, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(232, 222, 202, 0.8), transparent 28%),
+    radial-gradient(circle at right 15%, rgba(206, 223, 210, 0.55), transparent 24%),
+    linear-gradient(180deg, var(--bg) 0%, #f8f4ec 100%);
+  min-height: 100vh;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+.page-shell {
+  width: min(1160px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 1.25rem 0 4rem;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 0.75rem 0 1.5rem;
+}
+
+.brand {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.site-nav a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+  gap: 2rem;
+  align-items: center;
+  padding: 2rem 0 3rem;
+}
+
+.hero-copy h1,
+.card h2 {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  line-height: 0.98;
+  letter-spacing: -0.02em;
+}
+
+.hero-copy h1 {
+  font-size: clamp(3.3rem, 7vw, 5.8rem);
+  max-width: 11ch;
+}
+
+.eyebrow,
+.section-label {
+  margin: 0 0 0.85rem;
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.intro,
+.card p,
+.contact-list,
+.pricing-tier p,
+.service-list p {
+  color: var(--muted);
+  line-height: 1.75;
+  font-size: 1rem;
+}
+
+.intro {
+  max-width: 38rem;
+  margin: 1.25rem 0 0;
+  font-size: 1.08rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  padding: 0.8rem 1.25rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 180ms ease, background-color 180ms ease,
+    border-color 180ms ease;
+}
+
+.button:hover,
+.button:focus-visible {
+  transform: translateY(-1px);
+}
+
+.button-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #f8f4ec;
+}
+
+.button-secondary {
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.portrait-card,
+.card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  backdrop-filter: blur(18px);
+  box-shadow: var(--shadow);
+}
+
+.portrait-card {
+  border-radius: 30px;
+  padding: 1rem;
+}
+
+.portrait-card img {
+  width: 100%;
+  border-radius: 22px;
+  background: var(--surface-strong);
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.card {
+  border-radius: 28px;
+  padding: 2rem;
+}
+
+#about {
+  grid-column: span 5;
+}
+
+#practice {
+  grid-column: span 7;
+}
+
+#pricing,
+#contact {
+  grid-column: 1 / -1;
+}
+
+.card h2 {
+  font-size: clamp(2rem, 3.2vw, 3.1rem);
+  margin-bottom: 1rem;
+}
+
+.service-list,
+.pricing-grid,
+.contact-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.service-list {
+  margin-top: 1.5rem;
+}
+
+.service-list h3,
+.pricing-tier h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.1rem;
+}
+
+.note {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.95rem;
+}
+
+.pricing-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 2rem;
+  align-items: stretch;
+}
+
+.pricing-tier {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-radius: 22px;
+  min-height: 100%;
+  padding: 1.75rem;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(33, 48, 42, 0.08);
+}
+
+.pricing-tier.featured {
+  background: linear-gradient(180deg, #eff4ed 0%, #f9f5ed 100%);
+  border-color: rgba(50, 89, 77, 0.22);
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(50, 89, 77, 0.12);
+}
+
+.price {
+  margin: 0 0 1rem;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.contact-card {
+  background:
+    radial-gradient(circle at top right, rgba(216, 226, 216, 0.75), transparent 30%),
+    var(--surface);
+}
+
+.contact-list a,
+.contact-list span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.4rem;
+  text-decoration: none;
+}
+
+@media (max-width: 960px) {
+  .hero,
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-tier.featured {
+    transform: none;
+  }
+
+  #about,
+  #practice,
+  #pricing,
+  #contact {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-shell {
+    width: min(100% - 1rem, 100%);
+  }
+
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero {
+    padding-top: 1rem;
+  }
+
+  .hero-copy h1 {
+    max-width: 100%;
+  }
+
+  .card,
+  .portrait-card {
+    border-radius: 24px;
+  }
+}

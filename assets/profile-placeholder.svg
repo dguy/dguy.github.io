@@ -1,0 +1,11 @@
+<svg width="800" height="980" viewBox="0 0 800 980" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="980" rx="40" fill="#F4EFE4"/>
+  <path d="M0 756C91.7704 689.165 181.17 655.747 268.2 655.747C398.746 655.747 522.782 734.147 800 879.001V980H0V756Z" fill="#D6E1D6"/>
+  <circle cx="399.5" cy="324.5" r="170.5" fill="#E5D7C4"/>
+  <path d="M247.738 584.405C247.738 485.316 327.946 405.107 427.035 405.107H372.965C472.054 405.107 552.262 485.316 552.262 584.405V637.143H247.738V584.405Z" fill="#C6B198"/>
+  <circle cx="399.5" cy="302.5" r="106.5" fill="#FCF8F1"/>
+  <path d="M294 301.804C294 230.281 351.981 172.3 423.504 172.3C495.027 172.3 553.008 230.281 553.008 301.804V314.587C553.008 243.064 495.027 185.083 423.504 185.083C351.981 185.083 294 243.064 294 314.587V301.804Z" fill="#A18266"/>
+  <rect x="174" y="738" width="452" height="92" rx="20" fill="#FCF8F1"/>
+  <text x="400" y="776" text-anchor="middle" fill="#32594D" font-family="Arial, sans-serif" font-size="28" font-weight="700">Add your portrait here</text>
+  <text x="400" y="815" text-anchor="middle" fill="#56655F" font-family="Arial, sans-serif" font-size="22">Replace this file with your photo</text>
+</svg>
